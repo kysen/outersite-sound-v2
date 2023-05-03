@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
-// import { container } from "assets/jss/material-kit-react.js";
 
 const useStyles = makeStyles({
   root: {

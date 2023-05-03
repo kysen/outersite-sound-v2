@@ -1,28 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import "./assets/scss/material-kit-react.scss?v=1.8.0";
+import React from 'react'
+import OutersiteSoundPage from "./views/OutersiteSoundPage/OutersiteSoundPage.jsx";
+import ZenithPage from "./views/Bands/ZenithPage/ZenithPage.jsx";
+import MooseCanoePage from "./views/Bands/MooseCanoePage/MooseCanoePage.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ZenithPage />
+      <MooseCanoePage />
+      <OutersiteSoundPage />
     </>
   )
 }
-
 export default App

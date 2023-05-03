@@ -16,9 +16,9 @@ import Icon from "@material-ui/core/Icon";
 import Popper from "@material-ui/core/Popper";
 
 // core components
-import Button from "components/CustomButtons/Button.js";
+import Button from "./components/CustomButtons/Button.jsx";
 
-import styles from "assets/jss/material-kit-react/components/customDropdownStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/customDropdownStyle.js";
 
 const useStyles = makeStyles(styles);
 
@@ -106,8 +106,8 @@ export default function CustomDropdown(props) {
               ? "top-start"
               : "top"
             : left
-            ? "bottom-start"
-            : "bottom"
+              ? "bottom-start"
+              : "bottom"
         }
         className={classNames({
           [classes.popperClose]: !anchorEl,
