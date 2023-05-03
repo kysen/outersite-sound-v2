@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   navbar: {
@@ -14,23 +14,27 @@ const useStyles = makeStyles({
     transition: ".2s ease-in-out",
     color: "#F7CA00",
     padding: 20,
+    cursor: 'pointer',
+    '&:hover': {
+      color: 'purple'
+    }
   },
 });
 
-export default function Navbar() {
+export default function Navbar({ tab, setTab }) {
   const classes = useStyles();
 
   return (
     <div className={classes.navbar}>
-      <Link to="outersite" className={classes.tab}>
+      <div onClick={() => setTab('outersite')} className={classes.tab}>
         HOME
-      </Link>
-      <Link to="zenith" className={classes.tab}>
+      </div>
+      <div onClick={() => setTab('zenith')} className={classes.tab}>
         ZENITH
-      </Link>
-      <Link to="moose-canoe" className={classes.tab}>
+      </div>
+      <div onClick={() => setTab(newLocal)} className={classes.tab}>
         MOOSE CANOE
-      </Link>
+      </div>
     </div>
   );
 }
